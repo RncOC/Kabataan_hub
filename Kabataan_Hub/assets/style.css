@@ -1,0 +1,719 @@
+
+        /* DITO */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-text span {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1764c0;
+        }
+
+        .logo-text b {
+            color: #d83b3b;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            
+        }
+        .logo-tagline {
+            display: block;
+            font-size: 12px;
+            margin-top: 2px;
+            color: #888;
+        }
+:root {
+    --p: #1769e0;
+    --p2: #0d55c7;
+    --red: #e43131;
+    --d: #18345f;
+    --m: #5e7192;
+    --bg: #f7fbff;
+    --b: argin-top: 2px #e1e9f4;
+    --danger: #c62828;
+    --yellow: #ffd21c;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f7fbff 55%,
+        #ffffff 100%
+    );
+    color: var(--d);
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    min-height: 82px;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #edf2f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 2px 15px rgba(25, 55, 95, 0.06);
+}
+
+nav b {
+    font-size: 29px;
+    color: var(--p);
+    letter-spacing: -0.5px;
+}
+
+nav b i {
+    color: var(--red);
+    font-style: normal;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    margin-left: 18px;
+    color: #304a70;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--p);
+}
+
+/* =========================
+   HERO
+========================= */
+
+header {
+    min-height: 570px;
+
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f4f9ff 65%,
+        #ffffff 100%
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* WATERMARK */
+
+body {
+    position: relative;
+    background: #f8fbff;
+}
+
+body {
+    position: relative;
+    background: #f8fbff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("kabataan-watermark.png");
+    background-position: center;
+    background-size: 550px;
+    background-repeat: no-repeat;
+
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* HERO CONTENT */
+
+header > div {
+    position: relative;
+    z-index: 1;
+}
+
+header small {
+    color: var(--p);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+header h1 {
+    font-size: 64px;
+    line-height: 1.03;
+
+    margin: 15px 0;
+
+    color: #193a68;
+    letter-spacing: -1.5px;
+}
+
+header span {
+    color: var(--red);
+}
+
+header p {
+    color: var(--m);
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 610px;
+
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    background: var(--p);
+    color: #ffffff !important;
+
+    border: 0;
+    border-radius: 10px;
+
+    padding: 10px 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    box-shadow: 0 7px 18px rgba(23, 105, 224, 0.18);
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--p2);
+    transform: translateY(-1px);
+}
+
+.big {
+    padding: 14px 23px;
+    margin-top: 8px;
+}
+
+.small {
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.secondary {
+    background: #edf4ff !important;
+    color: var(--d) !important;
+    box-shadow: none;
+}
+
+.danger {
+    background: var(--danger);
+    color: #ffffff;
+
+    border: 0;
+    border-radius: 8px;
+
+    padding: 7px 10px;
+
+    cursor: pointer;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid var(--b);
+    border-radius: 24px;
+
+    padding: 45px;
+
+    box-shadow: 0 12px 35px rgba(23, 52, 95, 0.08);
+
+    backdrop-filter: blur(6px);
+}
+
+.hero-card b {
+    color: var(--p);
+    letter-spacing: 1px;
+}
+
+.hero-card h2 {
+    font-size: 32px;
+    margin: 15px 0;
+    color: var(--d);
+}
+
+.hero-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section,
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 24px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: var(--d);
+    margin-bottom: 35px;
+}
+
+/* =========================
+   FEATURE GRID
+========================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+article {
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid var(--b);
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 12px 35px rgba(23, 52, 95, 0.08);
+
+    transition: 0.2s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(23, 52, 95, 0.12);
+}
+
+article .icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+article b {
+    font-size: 18px;
+    color: var(--d);
+}
+
+article p {
+    color: var(--m);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================
+   BOXES
+========================= */
+
+.box {
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid var(--b);
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 12px 35px rgba(23, 52, 95, 0.08);
+}
+
+/* =========================
+   FORMS
+========================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--b);
+    border-radius: 10px;
+
+    margin: 7px 0;
+
+    font: inherit;
+
+    background: #ffffff;
+
+    color: var(--d);
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--p);
+    box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.08);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* =========================
+   TWO COLUMNS
+========================= */
+
+.two {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+/* =========================
+   INLINE FORMS
+========================= */
+
+.inline {
+    display: inline;
+}
+
+.inline-form {
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin: 10px 0;
+}
+
+.inline-form input,
+.inline-form select {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    display: flex;
+    gap: 10px;
+
+    margin: 15px 0;
+}
+
+.search input {
+    flex: 1;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.error {
+    background: #fee;
+    color: #900;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin: 10px 0;
+}
+
+.success {
+    background: #e8f8ed;
+    color: #176b32;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin: 10px 0;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+    display: inline-block;
+
+    background: #edf4ff;
+
+    color: var(--p);
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+.unread {
+    border-left: 4px solid var(--p);
+}
+
+/* =========================
+   RECORDS
+========================= */
+
+.record {
+    margin: 12px 0;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #ffffff;
+
+    border: 1px solid var(--b);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid var(--b);
+
+    text-align: left;
+}
+
+th {
+    background: #f4f8fd;
+    color: var(--d);
+}
+
+tr:hover td {
+    background: #f9fbff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: var(--m);
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--b);
+
+    margin-top: 20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 10px 4%;
+
+        min-height: 70px;
+    }
+
+    nav b {
+        font-size: 22px;
+    }
+
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav a {
+        margin-left: 5px;
+        font-size: 13px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+
+        padding: 60px 7%;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 45px;
+    }
+
+    header p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header::before {
+        background-size: 360px auto;
+    }
+
+    .hero-card {
+        padding: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two {
+        grid-template-columns: 1fr;
+    }
+
+    section,
+    main {
+        padding: 50px 18px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    .inline-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inline-form input,
+    .inline-form select {
+        width: 100%;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav div {
+        justify-content: center;
+    }
+
+    header {
+        padding: 45px 20px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header small {
+        font-size: 11px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .hero-card h2 {
+        font-size: 25px;
+    }
+
+    article {
+        padding: 20px;
+    }
+}
